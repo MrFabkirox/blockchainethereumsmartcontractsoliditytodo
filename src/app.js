@@ -1,9 +1,12 @@
 App = { 
+  contracts: {},
   load: async () => {
     // Load app...
     console.log("app loading...")
     await App.loadWeb3()
     await App.loadAccount()
+    await App.loadContract()
+    await App.render()
   },  
 
 // https://medium.com/metamask/https-medium-com-metamask-breaking-change-injecting-web3-7722797916a8
@@ -44,8 +47,23 @@ App = {
   loadAccount: async () => {
     // Set the current blockchain account
     App.account = web3.eth.accounts[0]
-    console.log(App.account)
-    console.log("____________App.account")
+    console.log("____ App.account [%o]", App.account)
+  },
+  loadContract: async () => {
+    // Create a Javascript version of the smart contract
+    const todoList = await $.getJSON('TodoList.json')
+    console.log("____ todoList [%o]", todoList)
+
+    App.contracts.TodoList = TruffleContract(todoList)
+    App.contracts.TodoList.setProvider(App.web3Provider)
+
+    // Hydrate the smart contract w values from blockchain
+    App.todoList = await App.contracts.TodoList.deployed()
+  },
+
+  render: async () => {
+    // Render Account
+    $('#account').html(App.account)
   }
 }
 
