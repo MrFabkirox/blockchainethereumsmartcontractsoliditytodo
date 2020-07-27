@@ -17,14 +17,14 @@ contract TodoList {
     bool completed
   );
 
+  event TaskCompleted(
+    uint id,
+    bool completed
+  );
+
   constructor() public {
       createTask("Check out dappuniversity.com");
   }
-
-  event TaskCompleted(
-    uit id,
-    bool completed
-  )
 
   function createTask(string memory _content) public {
     taskCount++;
@@ -34,8 +34,8 @@ contract TodoList {
 
   function toggleCompleted(uint _id) public {
     Task memory _task = tasks[_id];
-    _task.comleted = !_task.completed;
+    _task.completed = !_task.completed;
     tasks[_id] = _task;
-    emit TaskCompleted(id, _task.completed);
+    emit TaskCompleted(_id, _task.completed);
   }
 }

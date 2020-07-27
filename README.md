@@ -115,5 +115,5 @@ Result {
   id:
 }
 
-npm dev run 
+npm run dev
 
