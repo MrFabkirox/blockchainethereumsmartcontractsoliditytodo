@@ -40,12 +40,11 @@ truffle-config.js<br />
 <br />
 <br />
 Ganache<br />
-...hostname 120.0.0.1 - Io0<br />
-...port number 7545<br />
-...network id 5777<br />
-...hardfork Muir Glacier<br />
-...Ganache/advanced/verbose logs ./build/contracts/<br />
-...address 0xA69A69ae0c947c08FdFCAEd5052e26EcB08e4Ca5<br />
+hostname 120.0.0.1 - Io0<br />
+port number 7545<br />
+network id 5777<br />
+hardfork Muir Glacier<br />
+Ganache/advanced/verbose logs ./build/contracts/<br />
 <br />
 $ truffle init<br />
 $ npm init<br />
