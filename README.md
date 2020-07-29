@@ -33,7 +33,7 @@ $ truffle version<br />
 ...host: "127.0.0.1",<br />
 ...port: 7545,<br />
 <br />
-<h4>Ganache<h4>
+<h4>Ganache</h4>
 hostname 120.0.0.1 - Io0<br />
 port number 7545<br />
 network id 5777<br />
