@@ -1,6 +1,7 @@
-Versions:<br />
+<h4>Versions</h4>
 // ex:  "0.4.20". (Default: Truffle's installed solc)<br />
 <br />
+<h4>truffle</h4>
 $ truffle version<br />
 <br />
 ...Truffle v5.1.34 (core: 5.1.34)<br />
@@ -13,39 +14,33 @@ $ truffle version<br />
 //.Node v8.9.0<br />
 //.Web3.js v?????<br />
 <br />
-package.json<br />
-<br />
+<h4>package.json</h4>
 ...truffle": "5.0.2",<br />
 ...truffle-contract": "3.0.6"<br />
 //.truffle": "5.0.2",<br />
 //.truffle-contract": "3.0.6"<br />
 <br />
-<br />
-Migration.sol<br />
-<br />
+<h4>Migration.sol</h4>
 ...pragma solidity >=0.4.21 <0.7.0;<br />
 //.pragma solidity >=0.4.21 <0.6.0;<br />
 <br />
-TodoList.sol<br />
-<br />
+<h4>TodoList.sol</h4>
 ...pragma solidity ^0.5.0;<br />
 //.pragma solidity ^0.5.0;<br />
 <br />
-<br />
-truffle-config.js<br />
-<br />
+<h4>truffle-config.js</h4>
 ...version: "0.5.0", // "0.4.20" Default Truffle's solc<br />
 ...host: "127.0.0.1",<br />
 ...port: 7545,<br />
 <br />
-<br />
-Ganache<br />
+<h4>Ganache<h4>
 hostname 120.0.0.1 - Io0<br />
 port number 7545<br />
 network id 5777<br />
 hardfork Muir Glacier<br />
 Ganache/advanced/verbose logs ./build/contracts/<br />
 <br />
+<h4>truffle</h4>
 $ truffle init<br />
 $ npm init<br />
 <br />
@@ -67,10 +62,8 @@ truffle(development)> taskCount = await todoList.taskCount()<br />
 undefined<br />
 truffle(development)> taskCount.toNumber()<br />
 0<br />
-<br />
 $ truffle compile<br />
 $ truffle migrate --reset<br />
-<br />
 <br />
 2557$ truffle console<br />
 truffle(development)> todoList = await TodoList.deployed()<br />
@@ -90,7 +83,6 @@ truffle(development)> taskCount = await todoList.taskCount()<br />
 undefined<br />
 truffle(development)> taskCount.toNumber()<br />
 1<br />
-<br />
 // code change<br />
 <br />
 $ truffle compile<br />
@@ -115,4 +107,3 @@ Result {<br />
 }<br />
 <br />
 npm run dev<br />
-<br />
